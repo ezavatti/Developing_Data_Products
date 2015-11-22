@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PREDICTING FUEL CONSUMPTION</title>
+  <meta charset="utf-8">
+  <meta name="description" content="PREDICTING FUEL CONSUMPTION">
+  <meta name="author" content="ELVIS ZAVATTI">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>PREDICTING FUEL CONSUMPTION</h1>
+    <h2>DEVELOPING DATA PRODUCTS - Coursera - Data Management Specialization - John Hopkins University</h2>
+    <p>ELVIS ZAVATTI<br/>student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>THE PROJECT</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The project is part of the course Developing Data Products in the Data Management Specialization - Coursera offered by John Hopkins University.</p>
+
+<p>An App was developed to predict the fuel consumption of a vehicle based on selected features. The model for the prediction comes from a regression anaylisis of the dataset MTCARS.</p>
+
+<p>To see the App and have some fun with it, please click the following link.</p>
+
+<p><a href="https://ezavatti.shinyapps.io/Developing_Data_Products">https://ezavatti.shinyapps.io/Developing_Data_Products</a></p>
+
+<p>MTCARS is a database with data extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 11 aspects of automobile design and performance for 32 automobiles (1973-74 models). </p>
+
+<p>(Source Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391-411).</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>MTCARS</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>MTCARS has the following variables:</p>
+
+<p>[, 1]  mpg  Miles/(US) gallon<br>
+[, 2]  cyl  Number of cylinders<br>
+[, 3]  disp  Displacement (cu.in.)<br>
+[, 4]  hp  Gross horsepower<br>
+[, 5]  drat  Rear axle ratio<br>
+[, 6]  wt  Weight (lb/1000)<br>
+[, 7]  qsec  1/4 mile time<br>
+[, 8]  vs  V/S<br>
+[, 9]  am  Transmission (0 = automatic, 1 = manual)<br>
+[,10]  gear  Number of forward gears<br>
+[,11]  carb  Number of carburetors </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In order to determine the the most influential variables, a linear regression analysis was performed on all the variables. The dependent variable was mpg  Miles/(US) gallon and the rest were the dependent variables.</p>
+
+<p>The most influential variables were:</p>
+
+<p>Gross horse Power
+Number of Cylinders
+Weight
+Type of transmission</p>
+
+<p>For the purposes of this project, a new regression was prepared considering the mpg as dependent variables and the most influential variables as independent variables.</p>
+
+<p>The App allows to choose the independent variables and produces the following outputs:</p>
+
+<p>a. Shows the selected quantities of each variable
+b. Shows the fule consumption in miles per gallon and its equivalent in kilometers per liter</p>
+
+<p>In order to produce the output, the button SUBMIT must be clicked once the variables are chosen.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s give it a try!!!!</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>Click on the link <a href="https://ezavatti.shinyapps.io/Developing_Data_Products">https://ezavatti.shinyapps.io/Developing_Data_Products</a>
+The App is easy to understand. Select the features of the vehicle and click SUBMIT. </p>
+
+<p>The App will show the selected variables and will present the fuel consumption in miles per gallon and its equivalent in kilometers per liter.</p>
+
+<h3>Question 1</h3>
+
+<p>A MASERATI BORA has a power of 335 hp, a weight of 3,570 lbs, 8 cylinders and its transmission is manual.
+What is its estimated fuel consumption in miles per gallon?</p>
+
+<ol>
+<li><p>It is impossible to determine from the App</p></li>
+<li><p><em>13.8</em></p></li>
+<li><p>5.84</p></li>
+<li><p>19.64 (13.8 + 5.84) </p></li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>Check the input. Notice the answer units.</p>
+
+</div>
+<div class="quiz-explanation">
+  <p>The correct answer is 13.8 miles per gallon</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='THE PROJECT'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='MTCARS'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The App'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Let&#39;s give it a try!!!!'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+
+  <script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
